@@ -1,0 +1,69 @@
+@import "./light.css";
+
+:root {
+    --text-color: #c1d4ea;
+    --light: #9baecd;
+    --lighter: #24567b;
+    --very-light: #10314a;
+    --contrast: #011627;
+    --primary: #d3b081;
+    --primary-dark: #d3b081;
+}
+
+#alert {
+    background: rgba(17, 59, 92, 0.83);
+}
+
+.modal-mask {
+    background: rgba(17, 59, 92, 0.83);
+}
+
+.ql-container hr {
+    color: var(--light);
+}
+
+.ql-bubble .ql-editor pre.ql-syntax {
+    background: #000d18;
+    color: #fff;
+    border: solid 2px rgba(0, 0, 0, 0.05);
+}
+
+.ql-bubble .ql-editor .mention {
+    color: var(--primary);
+}
+
+.ql-bubble .ql-editor a {
+    color: var(--primary);
+}
+
+input::-webkit-input-placeholder {
+    color: var(--lighter);
+}
+
+input::-moz-placeholder {
+    color: var(--lighter);
+}
+
+input:-ms-input-placeholder {
+    color: var(--lighter);
+}
+
+input:-moz-placeholder {
+    color: var(--lighter);
+}
+
+textarea::-webkit-input-placeholder {
+    color: var(--lighter);
+}
+
+textarea::-moz-placeholder {
+    color: var(--lighter);
+}
+
+textarea:-ms-input-placeholder {
+    color: var(--lighter);
+}
+
+textarea:-moz-placeholder {
+    color: var(--lighter);
+}

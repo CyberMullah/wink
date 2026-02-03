@@ -18,10 +18,10 @@
 
     <!-- Style sheets-->
     @if(@auth('wink')->user()->meta['theme'] == 'dark')
-        <link href='{{mix('dark.css', 'vendor/wink')}}' rel='stylesheet' type='text/css'>
+        @vite(['resources/css/dark.css', 'resources/js/app.js'], 'vendor/wink')
         <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.13.1/build/styles/sunburst.min.css">
     @else
-        <link href='{{mix('light.css', 'vendor/wink')}}' rel='stylesheet' type='text/css'>
+        @vite(['resources/css/light.css', 'resources/js/app.js'], 'vendor/wink')
         <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.13.1/build/styles/github.min.css">
     @endif
 </head>
@@ -50,7 +50,5 @@
 <script>
     window.Wink = @json($winkScriptVariables);
 </script>
-
-<script src="{{mix('app.js', 'vendor/wink')}}"></script>
 </body>
 </html>

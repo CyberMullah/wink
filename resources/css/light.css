@@ -1,0 +1,133 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@import "../sass/animations.scss";
+@import "../sass/editor.scss";
+@import "../sass/multiselect.scss";
+@import "../sass/modal.scss";
+
+:root {
+    --text-color: #22292f;
+    --light: #9ba3aa;
+    --lighter: #cacfd4;
+    --very-light: #e9ecef;
+    --contrast: #ffffff;
+    --primary: #4040c8;
+    --primary-dark: #28287f;
+}
+
+body {
+    color: var(--text-color);
+}
+
+#alert {
+    position: absolute;
+    z-index: 99999;
+    width: 100%;
+    height: 100%;
+    background: #000000ba;
+}
+
+#alert svg {
+    display: block;
+    margin: 0 auto;
+    padding-top: 150px;
+    height: 100px;
+    fill: #fff;
+}
+
+#alert .alert-modal {
+    width: 500px;
+    background: #fff;
+    margin: 200px auto 0 auto;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+#alert input {
+    font-size: 16px;
+    line-height: 30px;
+    border-radius: 5px;
+    padding: 3px 10px;
+    margin: 20px 0 0 0;
+    width: 100%;
+    outline: none;
+    border: 1px solid #dfdfdf;
+}
+
+#alert input:focus {
+    border-color: var(--primary);
+}
+
+#alert h5 {
+    font-size: 22px;
+    font-weight: 300;
+    margin-bottom: 12px;
+}
+
+#alert p {
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.buttons {
+    margin-top: 20px;
+    text-align: right;
+}
+
+.buttons button {
+    padding: 10px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    outline: none;
+}
+
+.buttons .cancel {
+    background: transparent;
+    border: 1px solid var(--lighter);
+    color: var(--text-color);
+    margin-right: 10px;
+}
+
+.buttons .confirm {
+    background: var(--primary);
+    border: 1px solid var(--primary);
+    color: white;
+}
+
+.notification {
+    padding: 22px 30px;
+    background: #fff;
+    color: var(--text-color);
+    box-shadow: 0 10px 60px rgba(0, 0, 0, 0.08);
+    position: fixed;
+    bottom: 60px;
+    right: 40px;
+    border-radius: 5px;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    max-width: 400px;
+}
+
+.notification svg {
+    height: 25px;
+    width: 25px;
+    margin-right: 15px;
+}
+
+.notification .notification__text {
+    line-height: 25px;
+}
+
+.notification.success svg {
+    fill: var(--green);
+}
+
+.notification.error svg {
+    fill: var(--red);
+}
+
+@tailwind utilities;
